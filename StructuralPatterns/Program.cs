@@ -2,6 +2,7 @@
 using StructuralPatterns.Adapter.Implementation;
 using StructuralPatterns.Bridge.BridgeAbstraction;
 using StructuralPatterns.Bridge.Implementation;
+using StructuralPatterns.Proxy.Implementation;
 using System;
 using System.Collections.Generic;
 
@@ -27,6 +28,9 @@ namespace StructuralPatterns
 						break;
 					case 2:
 						BridgeExample();
+						break;
+					case 3:
+						ProxyExample();
 						break;
 					case 4:
 						Menu();
@@ -81,13 +85,29 @@ namespace StructuralPatterns
 
 			ReturnOrExit();
 		}
+
+		public static void ProxyExample()
+		{
+			Console.Clear();
+			Console.WriteLine("///////////////////// Proxy Example ///////////////////// \n");
+
+			MathProxy mProxy = new MathProxy();
+			int x = 4;
+			int y = 2;
+			Console.WriteLine("{0} + {1} = {2}", x, y, mProxy.Add(x, y));
+			Console.WriteLine("{0} - {1} = {2}", x, y, mProxy.Sub(x, y));
+			Console.WriteLine("{0} * {1} = {2}", x, y, mProxy.Mul(x, y));
+			Console.WriteLine("{0} / {1} = {2}", x, y, mProxy.Div(x, y));
+
+			ReturnOrExit();
+		}
 		#endregion Pattern Examples
 
 		#region Menu
 		private static void Menu()
 		{
 			Console.Clear();
-			string options = "1. Adapter Example\n2. Bridge Example\n3. Proxy Example\n4. Return\n0: Exit\n\n";
+			string options = "1. Adapter Example\n2. Bridge Example\n3. Proxy Example\n0: Exit\n\n";
 			Console.WriteLine(options + "Enter index: ");
 		}
 

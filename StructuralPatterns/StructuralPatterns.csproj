@@ -43,19 +43,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Adapter\Abstractions\IHRSystemAdapter.cs" />
+    <Compile Include="Adapter\Abstract\IHRSystemAdapter.cs" />
     <Compile Include="Adapter\Implementation\HRSystem.cs" />
     <Compile Include="Adapter\Implementation\HRSystemAdapter.cs" />
     <Compile Include="Adapter\Implementation\ThirdPartyBillingSystem.cs" />
     <Compile Include="Adapter\Model\Employee.cs" />
-    <Compile Include="Bridge\Abstractions\IMessageSenderBase.cs" />
-    <Compile Include="Bridge\Abstractions\IPerson.cs" />
-    <Compile Include="Bridge\BridgeAbstraction\Message.cs" />
-    <Compile Include="Bridge\BridgeAbstraction\UserEditedMessage.cs" />
+    <Compile Include="Bridge\Abstract\IMessageSenderBase.cs" />
+    <Compile Include="Bridge\Abstract\IPerson.cs" />
+    <Compile Include="Bridge\BridgeAbstract\Message.cs" />
+    <Compile Include="Bridge\BridgeAbstract\UserEditedMessage.cs" />
     <Compile Include="Bridge\Implementation\EmailSender.cs" />
     <Compile Include="Bridge\Implementation\WebServiceSender.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proxy\Abstract\IMath.cs" />
+    <Compile Include="Proxy\Implementation\Math.cs" />
+    <Compile Include="Proxy\Implementation\MathProxy.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
